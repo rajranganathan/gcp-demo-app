@@ -44,5 +44,5 @@ variable "image_name" {
 variable "service_account_name" {
   description = "The name of the Service Account."
   type        = string
-  default     = "demo-app-sa"
+  default     = "demo-app"
 }

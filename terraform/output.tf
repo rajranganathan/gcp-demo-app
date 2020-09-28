@@ -11,6 +11,6 @@ output "repository_http_url" {
   value       = google_sourcerepo_repository.repo.url
 }
 
-output "google_service_account_id" {
-  value = google_service_account.sa.unique_id
+output "google_service_account_email" {
+  value = google_service_account.sa.google_service_account_email
 }

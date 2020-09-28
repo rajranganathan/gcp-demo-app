@@ -26,7 +26,7 @@ variable "branch_name" {
 variable "service_name" {
   description = "The name of the Cloud Run service to deploy."
   type        = string
-  default     = "demo-app-service"
+  default     = "demo-app"
 }
 
 variable "repository_name" {

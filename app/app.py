@@ -1,12 +1,9 @@
-from google.cloud import datastore
+from flask import Flask
+app = Flask('hello-cloudbuild')
 
-ds_client = datastore.Client()
-KEY_TYPE = 'Record'
+@app.route('/')
+def hello():
+  return "Hello World!\n"
 
-def insert(**data):
-    entity = datastore.Entity(key=ds_client.key(KEY_TYPE))
-    entity.update(**data)
-    ds_client.put(entity)
-
-def query(limit):
-    return ds_client.query(kind=KEY_TYPE).fetch(limit=limit)
+if __name__ == '__main__':
+  app.run(host = '0.0.0.0', port = 8080)
